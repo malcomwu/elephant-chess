@@ -154,3 +154,18 @@ Layout in a 10 x 9 grid.
    and the assistants cannot eat each othere because they cannot go accross
    the river. The only exception is the king eats the king when one is shown.
    However, it is not to eat it and it is one of the checkmate.
+
+
+## Starup
+1. The host setup the table for the chess.
+2. Two players decide to take the red or black based on his or her
+   characteristics as general or leader.
+3. If they cannot decided it, the host flip coin.
+4. Three games or five games for a set is desided by the players or the host.
+5. The rule is red first. This is because the red need the layout for the
+   strategy and the black does not need it as much because the general is more
+   often in tactics.
+6. For the next game, one is to take turn, another is loser first or loser
+   choice.
+7. The language of the chess pieces is in English. It is fair or it is too easy
+   for the Chinese and Eastern people to win.
