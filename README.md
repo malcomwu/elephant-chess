@@ -62,7 +62,7 @@ Prisoner 卒    Sodier 兵      infantry             5
 
 
 ## Notes
-1, Only the red can eat the black and the black to eat the red. Red-red and
+1. Only the red can eat the black and the black to eat the red. Red-red and
    black-black cannot eat each other.
 2. Any role can hit and eat. The rule implies that the king, the secretaries
    and the assistants cannot eat each othere because they cannot go accross
