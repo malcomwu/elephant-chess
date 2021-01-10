@@ -1,4 +1,4 @@
-# Elephant-chess
+# Elephant chess
 A Chinese chess, namely elephant chess (象棋).
 
 
@@ -9,34 +9,34 @@ Black 黑       Red 紅         Role 角色         Amount
 --------------------------------------------------------------------------
 General 將     Leader 帥      King 王              1
 (Tiger)        (Lion)        Fighter-Commander    2
-Being 士       Accompany 仕   Secretary 卿         2
+Sargent 士       Accompany 仕   Secretary 卿         2
 Elephant 象    Minister 相    Assistant 宰         2
-Car 車         Carriage 俥    Officer 官           2
-Hourse 馬      Knight 傌      Governor 督          2
+Vehicle 車     Carriage 俥    Officer 官           2
+Horse 馬      Knight 傌      Governor 督          2
 Archer 砲      Artillery 炮   Artillery            2
 Prisoner 卒    Sodier 兵      infantry             5
 ==========================================================================
-*Being is sargent.
 ```
+
 
 ## Layout
 
 ```
-  1         2         3        4       5       6        7         8        9
+  1         2         3        4       5       6     -   7         8    -    9
   +---------+---------+--------+-------+-------+---------+---------+---------+
-1 Car    Hourse   Elephant   Being  General  Being   Elephant   Hourse     Car
+1 Vehicle  Horse  Elephant  Sargent  General  Sargent  Elephant  Horse Vehicle
 2 |                                    米                                    |
 3 |  Archer                                                    Archer        |
 4 Prisoner        Prisoner          Prisoner      Prisoner      Prisoner     |
 5 +---------+---------+--------+-------+-------+---------+---------+---------+
   |           River                                       Boundary           |
 5 +---------+---------+--------+-------+-------+---------+---------+---------+
-4 Sodier           Sodier            Sodier            Sodier           Sodier 
+4 Sodier           Sodier            Sodier            Sodier           Sodier
 3 | Artillery                                                Artillery       |
 2 |                                    米                                    |
 1 Carriage Knight Minister Accompany Leader Accompany Minister Knight Carriage
   +---------+---------+--------+-------+-------+---------+---------+---------+
-  9          8        7        6       5        4        3        2        1
+  9         8         7        6       5       4         3         2         1
 ```
 
 ## Rules
