@@ -2,7 +2,7 @@
 export default class Computer {
   constructor(cname) {
     this.name = 'computer'
-    this.cname = cnames
+    this.cname = cname
   }
 
   toString() {}

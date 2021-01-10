@@ -12,8 +12,8 @@ Sargent 士     Accompany 仕   Secretary 卿         2
 Elephant 象    Minister 相    Assistant 宰         2
 Vehicle 車     Carriage 俥    Officer 官           2
 Horse 馬       Knight 傌      Governor 督          2
-Archer 砲      Artillery 炮   Artillery            2
-Prisoner 卒    Sodier 兵      infantry             5
+Archer 砲 包   Artillery 炮   Artillery            2
+Pawn 卒        Sodier 兵      infantry             5
 ==========================================================
 *General (tiger, fighter)
 +Leader (lion, commander)
@@ -29,27 +29,27 @@ Layout in a 10 x 9 grid.
 ```
                                       (Black)
 
-     1        2        3        4        5        6        7        8        9
+    1        2        3        4        5        6        7        8        9
 
-1  Vehicle--Horse--Elephant--Sargent--General--Sargent-Elephant---Horse--Vehicle
-     |        |        |        |   \    |    /   |        |        |        |
-2    +--------+--------+--------+--------+--------+--------+--------+--------+
-     |        |        |        |   /    |    \   |        |        |        |
-3    +------Archer-----+--------+--------+--------+--------+------Archer-----+
-     |        |        |        |        |        |        |        |        |
-4  Prisoner---+-----Prisoner----+-----Prisoner----+-----Prisoner----+---Prisoner
-     |        |        |        |        |        |        |        |        |
-5    +--------+--------+--------+--------+--------+--------+--------+--------+
-     |           River Chu                            Han Boundary           |
-5    +--------+--------+--------+--------+--------+--------+--------+--------+
-     |        |        |        |        |        |        |        |        |
-4  Sodier-----+-----Sodier------+-----Sodier------+-----Sodier------+-----Sodier
-     |        |        |        |        |        |        |        |        |
-3    +----Artillery----+--------+--------+--------+--------+----Artillery----+
-     |        |        |        |   \    |    /   |        |        |        |
-2    +--------+--------+--------+--------+--------+--------+--------+--------+
-     |        |        |        |   /    |    \   |        |        |        |
-1  Carriage Knight Minister Accompany Leader Accompany Minister Knight Carriage
+1 Vehicle--Horse--Elephant--Sargent--General--Sargent-Elephant---Horse--Vehicle
+    |        |        |        |   \    |    /   |        |        |        |
+2   +--------+--------+--------+--------+--------+--------+--------+--------+
+    |        |        |        |   /    |    \   |        |        |        |
+3   +------Archer-----+--------+--------+--------+--------+------Archer-----+
+    |        |        |        |        |        |        |        |        |
+4 Pawn-------+------Pawn-------+------Pawn-------+------Pawn-------+------Pawn
+    |        |        |        |        |        |        |        |        |
+5   +--------+--------+--------+--------+--------+--------+--------+--------+
+    |           River Chu                            Han Boundary           |
+5   +--------+--------+--------+--------+--------+--------+--------+--------+
+    |        |        |        |        |        |        |        |        |
+4 Sodier-----+-----Sodier------+-----Sodier------+-----Sodier------+-----Sodier
+    |        |        |        |        |        |        |        |        |
+3   +----Artillery----+--------+--------+--------+--------+----Artillery----+
+    |        |        |        |   \    |    /   |        |        |        |
+2   +--------+--------+--------+--------+--------+--------+--------+--------+
+    |        |        |        |   /    |    \   |        |        |        |
+1 Carriage Knight Minister Accompany Leader Accompany Minister Knight Carriage
 
      9        8        7        6        5        4        3        2        1
 
@@ -70,7 +70,7 @@ Layout in a 10 x 9 grid.
   ||    |     |     |     |  /  |  \  |     |     |     |    ||
 3 ||    +---(Arc)---+-----+-----+-----+-----+---(Arc)---+    ||
   ||    |     |     |     |     |     |     |     |     |    ||
-4 ||  (Pri)---+---(Pri)---+---(Pri)---+---(Pri)---+---(Pri)  ||
+4 ||  (Paw)---+---(Paw)---+---(Paw)---+---(Paw)---+---(Paw)  ||
   ||    |     |     |     |     |     |     |     |     |    ||
 5 ||    +-----+-----+-----+-----+-----+-----+-----+-----+    ||
   ||    |    River Chu                  Han Boundary    |    ||
@@ -104,7 +104,7 @@ Layout in a 10 x 9 grid.
   ||    |     |     |     |  /  |  \  |     |     |     |    ||
 3 ||    +---[Arc]---+-----+-----+-----+-----+---[Arc]---+    ||
   ||    |     |     |     |     |     |     |     |     |    ||
-4 || [Pri]----+---[Pri]---+---[Pri]---+---[Pri]---+---[Pri]  ||
+4 || [Paw]----+---[Paw]---+---[Paw]---+---[Paw]---+---[Paw]  ||
   ||    |     |     |     |     |     |     |     |     |    ||
 5 ||    +-----+-----+-----+-----+-----+-----+-----+-----+    ||
   ||    |    River Chu                  Han Boundary    |    ||

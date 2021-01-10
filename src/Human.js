@@ -2,7 +2,7 @@
 export default class Human {
   constructor(hname) {
     this.name = 'human'
-    this.hname = hnames
+    this.hname = hname
   }
 
   toString() {}

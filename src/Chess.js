@@ -37,11 +37,11 @@ const getPieces = (take = 'red') => {
       archer1: r ? [7, 7] : [1, 2],
       archer2: r ? [1, 7] : [7, 2],
 
-      prisoner1: r ? [8, 6] : [0, 3],
-      prisoner2: r ? [6, 6] : [2, 3],
-      prisoner3: r ? [4, 6] : [4, 3],
-      prisoner4: r ? [2, 6] : [6, 3],
-      prisoner5: r ? [0, 6] : [8, 3]
+      pawn1: r ? [8, 6] : [0, 3],
+      pawn2: r ? [6, 6] : [2, 3],
+      pawn3: r ? [4, 6] : [4, 3],
+      pawn4: r ? [2, 6] : [6, 3],
+      pawn5: r ? [0, 6] : [8, 3]
     }
   }
 }
@@ -53,6 +53,10 @@ export default class Chess {
   }
 
   connect(player1, player2) {
+
+  }
+
+  render() {
 
   }
 
