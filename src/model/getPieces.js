@@ -1,3 +1,6 @@
+import Piece from './Piece'
+
+// To be fixed...
 
 const getPieces = (take = 'red') => {
   const r = take === 'red'
@@ -44,22 +47,4 @@ const getPieces = (take = 'red') => {
       pawn5: r ? [0, 6] : [8, 3]
     }
   }
-}
-
-export default class Chess {
-  constructor(player1, player2) {
-    this.name = 'chess'
-    if (player1 && player2) this.connect(player1, player2s)
-  }
-
-  connect(player1, player2) {
-
-  }
-
-  render() {
-
-  }
-
-  toString() {}
-  toJSON() {}
 }

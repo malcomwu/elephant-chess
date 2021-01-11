@@ -1,5 +1,28 @@
-# Elephant chess
+# Elephant chess v0.1.0-delta
 A Chinese chess, namely elephant chess (象棋).
+
+
+## Usage
+
+**Nodejs**
+```
+const chess = new Chess('Fair play')
+const john = new Human('John Smith')
+const marry = new Computer('Marry Parker')
+chess.connect(john, marry)  // currently without network connection
+chess.set(3)
+chess.game()
+chess.game()  // possible set
+chess.game()  // set or error
+chess.game()  // error
+
+// Feature in v2.0: use firebase for remote players.
+```
+
+**Browser**
+```
+// To be described.
+```
 
 
 ## Roles
@@ -169,3 +192,36 @@ Layout in a 10 x 9 grid.
    choice.
 7. The language of the chess pieces is in English. It is fair or it is too easy
    for the Chinese and Eastern people to win.
+
+
+## Technical details
+
+**Coordinate of the grid**
+
+Internal index system: (0, 0)--(8, 9)
+```
+(1--5; b-u)    side A (player A; take b/r)
+
+   0   1   2   3   4   5   6   7   8  (1--9; r-l)
+0  +---+---+---+---+---+---+---+---+
+   |   |   |   | \ | / |   |   |   |
+1  +---+---+---+---+---+---+---+---+
+   |   |   |   | / | \ |   |   |   |
+2  +---#---+---+---+---+---+---#---+
+   |   |   |   |   |   |   |   |   |
+3  #---+---#---+---#---+---#---+---#
+   |   |   |   |   |   |   |   |   |
+4  +---+---+---+---+---+---+---+---+
+   |                               |
+5  +---+---+---+---+---+---+---+---+
+   |   |   |   |   |   |   |   |   |
+6  #---+---#---+---#---+---#---+---#
+   |   |   |   |   |   |   |   |   |
+7  +---#---+---+---+---+---+---#---+
+   |   |   |   | \ | / |   |   |   |
+8  +---+---+---+---+---+---+---+---+
+   |   |   |   | / | \ |   |   |   |
+9  +---+---+---+---+---+---+---+---+  (9--1; r-l)
+
+(1--5; b-u)    side B (player B; take r/b)
+```

@@ -1,9 +1,9 @@
+
+/* Helpers */
 const print = console.log
 
-// export default class View {
-const View = module.exports = class View {
+export default class View {
   constructor(style) {
-    this.name = 'view'
     this.style = style
   }
 

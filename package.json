@@ -1,0 +1,25 @@
+{
+  "name": "elephant-chess",
+  "version": "0.1.0-delta",
+  "description": "A Chinese chess, namely elephant chess (象棋).",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node tools/build",
+    "watch": "node tools/watch",
+    "serve": "node tools/serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malcomwu/elephant-chess.git"
+  },
+  "keywords": [
+    "elephant",
+    "chess"
+  ],
+  "author": "Malcom Wu <malcomwu@hotmail.com>",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/malcomwu/elephant-chess/issues"
+  },
+  "homepage": "https://github.com/malcomwu/elephant-chess#readme"
+}
