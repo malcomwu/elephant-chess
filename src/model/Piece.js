@@ -1,23 +1,29 @@
 
 /* Helpers */
-const setLevel = str => {
+const WEIGHT = [100, 10, 10, 30, 20, 25, 3]
+const setWeight = str => {
   const result = {}
-  str.split(' '). forEach((detailed, i) => { result[detailed] = 7 - i })
-  return return
+  str.split(' '). forEach((detailed, i) => { result[detailed] = WEIGHT[i] })
+  return result
 }
 
-const BLACK = setLevel('General Sargent Elephant Vehicle Horse Archer Pawn')
-const RED = setLevel('Leader Accompany Minister Carriage Knight Artillery Sodier')
+import Coordinate from './Coordinate'
+
+const BLACK = setWeight('General Sargent Elephant Vehicle Horse Archer Pawn')
+const RED = setWeight('Leader Accompany Minister Carriage Knight Artillery Sodier')
+
+const nameToDetailed = name => {
+  return name[0].toUpperCase() + name.substr(1).replace(/\d/, '')
+}
+const error = () => { throw new Error('Color') }
 
 export default class Piece {
-  constructor(piece) {
-    const { name, detailed, coord, owner } = piece
+  constructor(name, side, coord) {
     this.name = name
-    this.detailed = detailed
-    this.color = BLACK[detailed] ? 'black' :
-                   RED[detailed] ? 'red' : throw new Error('Color')
-    this._coord = coord  // (0, 0) -- (8, 9)
-    this.owner = owner  // A or B
+    this.detailed = nameToDetailed(name)
+    this.color = BLACK[this.detailed] ? 'black' :
+                   RED[this.detailed] ? 'red' : error()
+    this.coord = new Coordinate(side, coord)
   }
 
   get abbr() { return this.detailed.substr(0, 3) }
@@ -25,14 +31,4 @@ export default class Piece {
   get recognition() {
     return this.color === 'black' ? '[' + abbr + ']' : this.pretty
   }
-
-  get coord() {
-    // ower is A or B; Coordinate?
-  }
-
-  set coord() {
-    // ower is A or B
-  }
 }
-
-makePiece(name, detailed, )

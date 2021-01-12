@@ -201,7 +201,7 @@ Layout in a 10 x 9 grid.
 Internal index system: (0, 0)--(8, 9)
 ```
 (1--5; b-u)    side A (player A; take b/r)
-
+               ^^^^^^
    0   1   2   3   4   5   6   7   8  (1--9; r-l)
 0  +---+---+---+---+---+---+---+---+
    |   |   |   | \ | / |   |   |   |
@@ -224,4 +224,5 @@ Internal index system: (0, 0)--(8, 9)
 9  +---+---+---+---+---+---+---+---+  (9--1; r-l)
 
 (1--5; b-u)    side B (player B; take r/b)
+               ^^^^^^
 ```

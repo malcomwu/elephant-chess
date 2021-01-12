@@ -1,50 +1,61 @@
 import Piece from './Piece'
 
-// To be fixed...
+const red = {
+  leader: [5, 1],
+  accompany1: [4, 1],
+  accompany2: [6, 1],
+  minister1: [3, 1],
+  minister2: [7, 1],
+  knight1: [2, 1],
+  knight2: [8, 1],
+  carriage1: [1, 1],
+  carriage2: [9, 1],
+  artillery1: [2, 3],
+  artillery2: [8, 3],
+  sodier1: [1, 4],
+  sodier2: [3, 4],
+  sodier3: [5, 4],
+  sodier4: [7, 4],
+  sodier5: [9, 4]
+}
 
-const getPieces = (take = 'red') => {
-  const r = take === 'red'
-  return {
-    red: {
-      leader: r ? [4, 0] : [4, 9],
-      accompany1: r ? [3, 0] : [5, 9],
-      accompany2: r ? [5, 0] : [3, 9],
-      minister1: r ? [2, 0] : [6, 9],
-      minister2: r ? [6, 0] : [2, 9],
-      knight1: r ? [1, 0] : [7, 9],
-      knight2: r ? [7, 0] : [1, 9],
-      carriage1: r ? [0, 0] : [8, 9],
-      carriage2: r ? [8, 0] : [0, 9],
+const black = {
+  general: [5, 1],
+  sargent1: [4, 1],
+  sargent2: [6, 1],
+  elephant1: [3, 1],
+  elephant2: [7, 1],
+  horse1: [2, 1],
+  horse2: [8, 1],
+  vehicle1: [1, 1],
+  vehicle2: [9, 1],
+  archer1: [2, 3],
+  archer2: [8, 3],
+  pawn1: [1, 4],
+  pawn2: [3, 4],
+  pawn3: [5, 4],
+  pawn4: [7, 4],
+  pawn5: [9, 4]
+}
 
-      artillery1: r ? [1, 2] : [7, 7],
-      artillery2: r ? [7, 2] : [1, 7],
+export default function getPieces(colorA = 'black') {
+  const pieces = []
 
-      Sodier1: r ? [0, 3] : [8, 6],
-      Sodier2: r ? [2, 3] : [6, 6],
-      Sodier3: r ? [4, 3] : [4, 6],
-      Sodier4: r ? [6, 3] : [2, 6],
-      Sodier5: r ? [8, 3] : [0, 6]
-    },
-
-    black: {
-      general: r ? [4, 9] : [4, 0],
-      sargent1: r ? [5, 9] : [3, 0],
-      sargent2: r ? [3, 9] : [5, 0],
-      elephant1: r ? [6, 9] : [2, 0],
-      elephant2: r ? [2, 9] : [6, 0],
-      vehicle1: r ? [7, 9] : [1, 0],
-      vehicle2: r ? [1, 9] : [7, 0],
-      horse1: r ? [8, 9] : [0, 0],
-      horse2: r ? [0, 9] : [8, 0],
-
-      archer1: r ? [7, 7] : [1, 2],
-      archer2: r ? [1, 7] : [7, 2],
-
-      pawn1: r ? [8, 6] : [0, 3],
-      pawn2: r ? [6, 6] : [2, 3],
-      pawn3: r ? [4, 6] : [4, 3],
-      pawn4: r ? [2, 6] : [6, 3],
-      pawn5: r ? [0, 6] : [8, 3]
-    }
+  if (colorA === 'black') {
+    Object.keys(black).forEach(name => {
+      pieces.push(new Piece(name, 'A', black[name]))
+    })
+    Object.keys(red).forEach(name => {
+      pieces.push(new Piece(name, 'B', red[name]))
+    })
+  } else {
+    Object.keys(black).forEach(name => {
+      pieces.push(new Piece(name, 'B', black[name]))
+    })
+    Object.keys(red).forEach(name => {
+      pieces.push(new Piece(name, 'A', red[name]))
+    })
   }
+
+  return pieces
 }
