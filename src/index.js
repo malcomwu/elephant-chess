@@ -1,18 +1,13 @@
+import Chess from './model/Chess'
+import Human from './model/Human'
+import Computer from './model/Computer'
 import appElement from './view/appElement'
 
-import getPieces from './model/getPieces'
+const john = new Human('John Smith')
+const marry = new Computer('Marry Parker')
 
-console.log(getPieces())
-
-// import Chess from './model/Chess'
-// import Human from './model/Human'
-// import Computer from './model/Computer'
-
-// const john = new Human('John Smith')
-// const marry = new Computer('Marry Parker')
-
-// const chess = new Chess('Fair play')
-// chess.connect(john, marry)
+const chess = new Chess('Fair play')
+chess.connect(john, marry)
 
 // chess.set(3)
 // chess.game()
@@ -20,4 +15,4 @@ console.log(getPieces())
 // chess.game()  // set or error
 // chess.game()  // error
 
-document.body.append(appElement())
+document.body.append(appElement(chess))

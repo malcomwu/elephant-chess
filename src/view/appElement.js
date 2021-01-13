@@ -1,7 +1,9 @@
 import el from 'el'
+import guiGrid from './guiGrid'
+import textGrid from './textGrid'
 
 const detailed = `
-                                      (Black)
+                                   (A: Black)
 
     1        2        3        4        5        6        7        8        9
 
@@ -27,11 +29,11 @@ const detailed = `
 
      9        8        7        6        5        4        3        2        1
 
-                                       (Red)
+                                     (B: Red)
 `
 
 const pretty = `
-                             (Black)
+                            (A: Black)
 
         1     2     3     4     5     6     7     8     9
   =============================================================
@@ -59,11 +61,11 @@ const pretty = `
   =============================================================
         9     8     7     6     5     4     3     2     1
 
-                              (Red)
+                            (B: Red)
 `
 
 const recognition = `
-                             [Black]
+                            [A: Black]
 
         1     2     3     4     5     6     7     8     9
   =============================================================
@@ -91,30 +93,42 @@ const recognition = `
   =============================================================
         9     8     7     6     5     4     3     2     1
 
-                              (Red)
+                            (B: Red)
 `
 
-export default function appElement() {
+export default function appElement(chess) {
   return el.create('div', [
-    el('h2', 'Prototye'),
-    el('p', `The first product is text-based and use command to chess.
-             The command history will be aside. It will be less interactive.
-             The future version may include graphical user interface (GUI) such
-             as color, click and hint the possible moves. If one can play in
-             the text mode good, one can play in GUI very good`),
-    el('h3', 'Detailed style'),
-    el('pre', {
-      style: 'background-color: #dd7; padding: 20px; border: 2px solid #aa6; width: 570px'
-    }, detailed),
 
-    el('h3', 'Pretty style'),
-    el('pre', {
-      style: 'background-color: #dd7; padding: 20px; border: 2px solid #aa6; width: 465px'
-    }, pretty),
+    el('h2', 'Detailed style'),
+    textGrid(chess.grid, 'detailed'),
 
-    el('h3', 'Recognition style'),
-    el('pre', {
-      style: 'background-color: #dd7; padding: 20px; border: 2px solid #aa6; width: 465px'
-    }, recognition)
+    el('h2', 'Pretty style'),
+    textGrid(chess.grid, 'pretty'),
+
+    el('h2', 'Recognition style'),
+    textGrid(chess.grid, 'recognition'),
+
+    // ------------------------------------------------------------------------
+    // el('h2', 'Prototye'),
+    // el('p', `The first product is text-based and use command to chess.
+    //          The command history will be aside. It will be less interactive.
+    //          The future version may include graphical user interface (GUI) such
+    //          as color, click and hint the possible moves. If one can play in
+    //          the text mode good, one can play in GUI very good`),
+
+    // el('h3', 'Detailed style'),
+    // el('pre', {
+    //   style: 'background-color: #dd7; padding: 20px; border: 2px solid #aa6; width: 570px'
+    // }, detailed),
+
+    // el('h3', 'Pretty style'),
+    // el('pre', {
+    //   style: 'background-color: #dd7; padding: 20px; border: 2px solid #aa6; width: 465px'
+    // }, pretty),
+
+    // el('h3', 'Recognition style'),
+    // el('pre', {
+    //   style: 'background-color: #dd7; padding: 20px; border: 2px solid #aa6; width: 465px'
+    // }, recognition)
   ])
 }
