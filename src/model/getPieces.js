@@ -23,12 +23,20 @@ const red = {
 
 const black = {
   general: [1, 5],
-  sargent1: [1, 4],
+
+  // sargent1: [1, 4],
+  sargent1: [2, 5],
+
   sargent2: [1, 6],
-  elephant1: [1, 3],
+
+  // elephant1: [1, 3],
+  elephant1: [3, 5],
+
   elephant2: [1, 7],
+
   // horse1: [1, 2],
   horse1: [3, 3],
+
   horse2: [1, 8],
   vehicle1: [1, 1],
   vehicle2: [1, 9],
