@@ -25,6 +25,11 @@ chess.game()  // error
 ```
 
 
+## Todos
+1. Piece#possibleMoves
+2. Play command
+
+
 ## Roles
 ```
 ==========================================================

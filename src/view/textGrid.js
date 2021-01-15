@@ -35,7 +35,7 @@ const rightPadders = { 4: 2, 5: 2, 6: 1, 7: 1, 8: 0, 9: 0 }
 
 const getDetailed = grid => {
   const output = row => {
-    return grid.value[row].map((piece, col) => {
+    const places = grid.value[row].map((piece, col) => {
       if (piece) {
         const { detailed } = piece
         const { length } = detailed
@@ -51,8 +51,19 @@ const getDetailed = grid => {
         }
       }
       return outputDetailedMarker(row, col)
-    }).join('')
+    })
+    return avoidMerge(places).join('')
   }
+  const avoidMerge = places => {  // not thorough but a quick fix
+    return places.map((place, i) => {
+      const prevPlace = places[i - 1]
+      if (/[a-z]$/.test(prevPlace) && /^[A-Z].*\-$/.test(place)) {
+        return '-' + place.substring(0, place.length - 1)
+      }
+      return place
+    })
+  }
+
 
   const lines = ['']
   lines.push(`                                      (A: ${captical(grid.colorA)})`, '')
