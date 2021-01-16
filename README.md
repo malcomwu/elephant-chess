@@ -28,6 +28,15 @@ chess.game()  // error
 ## Todos
 1. Piece#possibleMoves
 2. Play command
+   ```
+   Command                History             Piece        eat
+   init(colorA)           the-grid-state
+   A or B let go pieces    "
+   Horse 2 advance 3       "                  from a to b  null
+   Carriage 4 advance 5    "                    "          Horse
+   Elephant 5 advance 3    "                    "          Sodier
+   Elephant 5 backup 3     "                    "
+   ```
 
 
 ## Roles
